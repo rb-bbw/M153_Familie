@@ -2,12 +2,6 @@
 'https://plantuml.com/object-diagram
 header Familie Objektdiagramm 1
 
-legend
-- Ehen inkl. Scheidung ersichtlich
-- Kinder ersichtlich
-- Schulabschluss festgehalten
-end legend
-
 object Person1 {
     name = "Hans"
     schulabschluss = "..."
@@ -33,13 +27,22 @@ object Ehe2 {
     ende = ""
 }
 
-Person1 -- Ehe2
+Ehe2 -- Person1
 Ehe2 -- Person2
 
-Person1 -- Ehe1
+Ehe1 -- Person1
 Ehe1 -- Person3
 
 Person1 "Vater" -- "Kind" Person4
 Person2 "Mutter" -- "Kind" Person4
+
+note "geschiedene Ehe weil\nende definiert" as N1
+N1 - Ehe1
+
+legend
+- Ehen inkl. Scheidung ersichtlich
+- Kinder ersichtlich
+- Schulabschluss festgehalten
+end legend
 
 @enduml

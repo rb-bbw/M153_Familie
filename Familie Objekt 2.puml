@@ -11,7 +11,7 @@ object Person1 {
     name = "Hans"
 }
 object Person2 {
-    name = "Margret"$
+    name = "Margret"
 }
 object Person3 {
     name = "Hansjörg"
