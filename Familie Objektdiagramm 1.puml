@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/object-diagram
+header Familie Objektdiagramm 1
+
+legend
+- Ehen inkl. Scheidung ersichtlich
+- Kinder ersichtlich
+- Schulabschluss festgehalten
+end legend
+
+object Person1 {
+    name = "Hans"
+    schulabschluss = "..."
+}
+object Person2 {
+    name = "Margret"
+    schulabschluss = "..."
+}
+object Person3 {
+    name = "Peter"
+    schulabschluss = "..."
+}
+object Person4 {
+    name = "Lisbet"
+    schulabschluss = "..."
+}
+object Ehe1 {
+    start = "2021-11-11"
+    ende = "2021-11-12"
+}
+object Ehe2 {
+    start = "2021-11-12"
+    ende = ""
+}
+
+Person1 -- Ehe2
+Ehe2 -- Person2
+
+Person1 -- Ehe1
+Ehe1 -- Person3
+
+Person1 "Vater" -- "Kind" Person4
+Person2 "Mutter" -- "Kind" Person4
+
+@enduml
