@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+header Familie Klassendiagramm
+
+class Person {
+    name
+    schulabschluss
+}
+class Ehe {
+    start
+    ende
+}
+
+Person "1..*" -- "0..*" Ehe
+
+Person "0..* Kind" -- "1..* Eltern" Person
+
+note "hat genau 2 Personen (1..*)\nist geschiedene Ehe sobal ende definiert ist" as N1
+N1 - Ehe
+
+note "Person als Kind hat genau 2 Eltern (1..*)\nPerson als Elternteil hat 0..* Kinder" as N2
+N2 - Person
+
+legend
+Annahme: immer beide Eltern sind bekannt
+end legend
+
+@enduml
