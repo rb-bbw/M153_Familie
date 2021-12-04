@@ -40,9 +40,7 @@ note "geschiedene Ehe weil\nende definiert" as N1
 N1 - Ehe1
 
 legend
-- Ehen inkl. Scheidung ersichtlich
-- Kinder ersichtlich
-- Schulabschluss festgehalten
+Zeigt laufende und geschiedene Ehe sowie Kinder
 end legend
 
 @enduml

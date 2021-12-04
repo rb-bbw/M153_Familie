@@ -2,11 +2,6 @@
 'https://plantuml.com/object-diagram
 header Familie Objektdiagramm 2
 
-legend
-- Geschwister über Eltern ersichtlich
-- Kinder können auch Eltern sein
-end legend
-
 object Person1 {
     name = "Hans"
 }
@@ -25,6 +20,12 @@ object Person5 {
 object Person6 {
     name = "Hildegard"
 }
+object Person7 {
+    name = "Jutta"
+}
+object Person8 {
+    name = "erwin"
+}
 
 Person1 "V" -- Person4
 Person2 "M" -- Person4
@@ -32,8 +33,18 @@ Person2 "M" -- Person4
 Person1 "V" -- Person5
 Person2 "M" -- Person5
 
-
 Person5 "M" -- Person6
 Person3 "V" -- Person6
+
+Person3 "V" -- Person8
+Person7 "M" -- Person8
+
+note "Kind aus Seitensprung" as N1
+N1 - Person8
+
+legend
+Zeigt (Halb-)Geschwister über Eltern
+Zeigt Kinder die selbst Kinder haben
+end legend
 
 @enduml
